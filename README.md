@@ -13,6 +13,42 @@ Make sure TFE User Token is created from the User Settings menu.  This is requir
 ```
 $ terraform fmt
 $ terraform init
+Initializing the backend...
+access_token
+  Access token to use to access Atlas. If ATLAS_TOKEN is set then
+  this will override any saved value for this.
+
+  Enter a value: xxxxxxxxxxxxxxxxxxxxx
+
+
+Successfully configured the backend "atlas"! Terraform will automatically
+use this backend unless the backend configuration changes.
+
+Initializing provider plugins...
+- Checking for available provider plugins on https://releases.hashicorp.com...
+- Downloading plugin for provider "null" (2.1.2)...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.null: version = "~> 2.1"
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+
 $ terraform apply
 ```
 The state information can be found in TFE by checking the ```States``` tab for the given workspace.
