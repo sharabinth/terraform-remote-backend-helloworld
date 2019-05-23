@@ -50,5 +50,29 @@ commands will detect it and remind you to do so if necessary.
 
 
 $ terraform apply
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  + null_resource.helloWorld
+      id: <computed>
+
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+null_resource.helloWorld: Creating...
+null_resource.helloWorld: Provisioning with 'local-exec'...
+null_resource.helloWorld (local-exec): Executing: ["/bin/sh" "-c" "echo hello world using remote state!"]
+null_resource.helloWorld (local-exec): hello world using remote state!
+
 ```
 The state information can be found in TFE by checking the ```States``` tab for the given workspace.
